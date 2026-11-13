@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-
+import '../App.css'
 
 export default function Countries() {
     const [countries, setCountries] = useState([])
@@ -28,13 +28,15 @@ export default function Countries() {
      console.log(countries)
    return (
     <div>
-        <h1>Test</h1>
+        
 
         <ul>
             {countries.map(country => (
                 <li key={country.name}>
                     <img src={country.flags.png}  />
-                    {country.name}
+                    <div>{country.name}</div>
+                    <div>Population: {country.population}</div>
+                    <div>{country.capital}</div>
                 </li>
             ))}
         </ul>
