@@ -1,0 +1,22 @@
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    list-style: none;
+}
+
+.card_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 0;
+    box-shadow: 10px 10px 5px rgb(194, 194, 194);
+    width: 320px;
+    background-color: rgb(255, 255, 255);
+   
+  
+  
+  
+}

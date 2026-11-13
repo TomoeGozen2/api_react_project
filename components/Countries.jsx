@@ -33,10 +33,13 @@ export default function Countries() {
         <ul>
             {countries.map(country => (
                 <li key={country.name}>
+                    <span className = "card_text">
                     <img src={country.flags.png}  />
+                    
                     <div>{country.name}</div>
                     <div>Population: {country.population}</div>
                     <div>{country.capital}</div>
+                    </span>
                 </li>
             ))}
         </ul>
