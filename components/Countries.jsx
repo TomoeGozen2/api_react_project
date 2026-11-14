@@ -3,6 +3,8 @@ import '../App.css'
 
 export default function Countries() {
     const [countries, setCountries] = useState([])
+    const [search, setSearch] = useState('')
+    const [visibleCountries, setVisibleCountries] = useState([]);
     useEffect(() => {
         fetch('data.json')
             //response = response from server
