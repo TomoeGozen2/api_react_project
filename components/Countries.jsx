@@ -4,7 +4,7 @@ import '../App.css'
 export default function Countries() {
     const [countries, setCountries] = useState([])
     const [search, setSearch] = useState('')
-    const [visibleCountries, setVisibleCountries] = useState([]);
+    
     useEffect(() => {
         fetch('data.json')
             //response = response from server
@@ -14,7 +14,9 @@ export default function Countries() {
             
             .then((data) => {
                 setCountries(data)
-                console.log(data)
+                
+                
+                
                
             })
             .catch(e => {
@@ -27,13 +29,19 @@ export default function Countries() {
             
 
     }, [])
+     
+        const visibleCountries = countries.filter(country => country.name.toLowerCase().includes(search.toLowerCase()));
+        
+    
+  
      console.log(countries)
    return (
     <div>
-        
+          <input type="text" value={search} onChange={(event) => setSearch(event.target.value)}  placeholder="Search for a country..." />
+           
 
         <ul>
-            {countries.map(country => (
+            {visibleCountries.map(country => (
                 <li key={country.name}>
                     <span className = "card_text">
                     <img loading = "lazy" src={country.flags.png}  />
