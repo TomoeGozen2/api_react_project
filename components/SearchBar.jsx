@@ -8,19 +8,19 @@ export default function SearchBar() {
         fetch('/data.json')
             .then(response => response.json())
             .then(data => {
-                setCountries(data);
+                
                 setVisibleCountries(data);
             })
             .catch(error => console.log(error));
     }, []);
     //The idea is you filter the countries by search. Is bugged for some reason. 
     function HandleSearch() {
-        const filteredCountry = countries.filter(country =>
-            country.name.toLowerCase() == search
-        );}
+        const filteredCountry = visibleCountries.filter(country => country == search);
+    
+    }
         return (
             <div>
-                <input type="text" value={search}  placeholder="Search for a country..." />
+                <input type="text" value={search} onChange={(event) => setSearch(event.target.value)}  placeholder="Search for a country..." />
                 <button onClick={HandleSearch}>Search for a country</button>
 
             </div>
