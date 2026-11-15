@@ -39,7 +39,7 @@ export default function Countries({style}) {
     <div style = {style}>
           <input type="text" value={search} onChange={(event) => setSearch(event.target.value)}  placeholder="Search for a country..." />
            
-        
+
         <ul>
             {visibleCountries.map(country => (
                 <li key={country.name}>
@@ -49,6 +49,7 @@ export default function Countries({style}) {
                     <div>{country.name}</div>
                     <div>Population: {country.population}</div>
                     <div>{country.capital}</div>
+                    <div>{country.region}</div>
                     </span>
                 </li>
             ))}
