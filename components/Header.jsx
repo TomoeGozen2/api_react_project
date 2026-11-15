@@ -1,6 +1,6 @@
 
 import {useState} from 'react' 
-
+import Countries from './Countries'
 export default function Header({color}){
     const [darkMode, setDarkmode] = useState(false)
 
@@ -13,7 +13,7 @@ export default function Header({color}){
         <div>
             <h1 className = "darkMode">Where in the world?</h1>
             <button onClick = {changeColor}>Switch Theme</button>
-            {darkMode ? <span style = {{backgroundColor: "rgb(103, 103, 103)"}}></span>: <span style = {{backgroundColor: "rgb(240, 240, 240)"}}></span>}
+            {darkMode ? <Countries style = {{backgroundColor: "rgb(103, 103, 103)"}}> </Countries>: <Countries style = {{backgroundColor: "rgb(240, 240, 240)"}}></Countries>}
             
         </div>
     )

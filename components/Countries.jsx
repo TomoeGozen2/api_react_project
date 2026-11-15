@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import '../App.css'
 
-export default function Countries() {
+export default function Countries({style}) {
     const [countries, setCountries] = useState([])
     const [search, setSearch] = useState('')
     
@@ -36,7 +36,7 @@ export default function Countries() {
   
      console.log(countries)
    return (
-    <div>
+    <div style = {style}>
           <input type="text" value={search} onChange={(event) => setSearch(event.target.value)}  placeholder="Search for a country..." />
            
 
