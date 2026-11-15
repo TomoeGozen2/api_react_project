@@ -11,8 +11,9 @@ export default function App(){
 
     <div>
       <Header />
-      <SearchBar />
-      <Countries />
+      {/* Dont uncomment this */}
+      {/* <SearchBar /> */}
+     
       
     </div>
   )
