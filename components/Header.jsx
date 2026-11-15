@@ -13,6 +13,7 @@ export default function Header({color}){
         <div>
             <h1 className = "darkMode">Where in the world?</h1>
             <button onClick = {changeColor}>Switch Theme</button>
+            {/* //creates countries and gives them the background color based on if the button is clicked or not */}
             {darkMode ? <Countries style = {{backgroundColor: "rgb(103, 103, 103)"}}> </Countries>: <Countries style = {{backgroundColor: "rgb(240, 240, 240)"}}></Countries>}
             
         </div>

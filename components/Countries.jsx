@@ -29,7 +29,7 @@ export default function Countries({style}) {
             
 
     }, [])
-     
+     //filter countries ny search
         const visibleCountries = countries.filter(country => country.name.toLowerCase().includes(search.toLowerCase()));
         
     
@@ -39,7 +39,7 @@ export default function Countries({style}) {
     <div style = {style}>
           <input type="text" value={search} onChange={(event) => setSearch(event.target.value)}  placeholder="Search for a country..." />
            
-
+        
         <ul>
             {visibleCountries.map(country => (
                 <li key={country.name}>
