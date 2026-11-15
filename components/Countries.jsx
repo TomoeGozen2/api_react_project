@@ -20,7 +20,8 @@ export default function Countries({style}) {
         )
     }, [])
      //filter countries ny search
-     //If the region is set to all regions it d
+     //If the region is set to all regions it shows all of them. 
+     
         const visibleCountries = countries.filter(country => country.name.toLowerCase().includes(search.toLowerCase())
     && (region === 'all_regions') || country.region ===region);
         
