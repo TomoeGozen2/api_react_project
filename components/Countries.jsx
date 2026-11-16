@@ -33,7 +33,7 @@ export default function Countries({style}) {
            <select  value = {region} onChange={(event) => setRegion(event.target.value)}>
             <option value = "all_regions">All Regions</option>
             <option value = "Africa">Africa</option>
-            <option value = "America">America</option>
+            <option value = "Americas">Americas</option>
             <option value = "Asia">Asia</option>
             <option value = "Europe">Europe</option>
             <option value = "Oceania">Oceania</option>
